@@ -12,15 +12,32 @@ export class HomePageItems
         return cy.get('div#page div.sub_panel_visible nav > a[title="2016-2022 Camaro Accessories & Parts"]');
     }
 
+
+    // camaro-accessories-parts ///////////////////////////
+
+    brakesNavItem()
+    {
+        return cy.get('section.gen_select_container ul.nav_first_tier a[title="2016-2021 Camaro Brakes"]')
+        .contains('Brakes');
+    }
+
+
+
+
     
     
     
     
     
-    
-    // freeCamaroCatalogRequestModalCloseLink()
-    // {
-    //     return cy.get('div.marketing_modal > form[data-form-type="RequestCatalog"] a.close_trigger')
-    //     .contains('No thanks');
-    // }
+    // Free Camaro Catalog Request Modal
+    freeCamaroCatalogRequestModal()
+    {
+        return cy.get('div.marketing_modal > div.marketing_modal');
+    }
+
+    freeCamaroCatalogRequestModalCloseLink()
+    {
+        return cy.get('div.marketing_modal > form[data-form-type="RequestCatalog"] a.close_trigger')
+        .contains('No thanks');
+    }
 }

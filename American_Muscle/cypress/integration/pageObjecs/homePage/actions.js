@@ -23,13 +23,28 @@ export class HomePageActions
     }
 
     
+
+
+    // camaro-accessories-parts ///////////////////////////
     
-    
-    
-    
-    
-    CloseFreeCamaroCatalogRequestModal()
+    clickBrakesNavItem()
     {
-        this.items.freeCamaroCatalogRequestModalCloseLink().click();
+        this.items.brakesNavItem.click();
+    }
+    
+    
+    
+    
+
+
+    // Free Camaro Catalog Request Modal
+    closeFreeCamaroCatalogRequestModal()
+    {
+        // this.items.freeCamaroCatalogRequestModalCloseLink().click();
+
+        if (this.items.freeCamaroCatalogRequestModal().length > 0)
+        {
+            this.items.freeCamaroCatalogRequestModalCloseLink().click();
+        }
     }
 }

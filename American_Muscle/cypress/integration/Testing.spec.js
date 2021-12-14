@@ -1,8 +1,6 @@
 /// <reference types="cypress" />
 
 import { HomePage } from "./pageObjecs/homePage/page";
-// import { AllCategoriesPage } from "./pageObjecs/allCategoriesPage/page";
-// import { MonitorsPage } from "./pageObjecs/monitorsPage/page";
 
 
 describe("American Muscle Testing",()=>
@@ -33,8 +31,7 @@ describe("American Muscle Testing",()=>
         homePage.tests.camaroShop2016_2022NavItemClicked()
 
         // Closing Camaro Catalog Request Modal
-        // if (cy.find("").length > 0)
-        // homePage.actions.CloseFreeCamaroCatalogRequestModal()
+        homePage.actions.closeFreeCamaroCatalogRequestModal()
     })
 
     // it("Verifying navigating to All Categories page", ()=>
