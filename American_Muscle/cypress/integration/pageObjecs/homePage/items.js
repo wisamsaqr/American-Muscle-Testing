@@ -4,7 +4,7 @@ export class HomePageItems
 
     camaroShopNavItem()
     {
-        return cy.get('div#page div.vehicle_select_container nav > a[data-vehicle-type="Camaro"]');
+        return cy.get('div#page div.vehicle_select_container nav > a[data-vehicle-type="Camaro"]', {timeout:60000});
     }
 
     camaroShop2016_2022NavItem()
@@ -13,15 +13,6 @@ export class HomePageItems
     }
 
 
-    // camaro-accessories-parts ///////////////////////////
-
-    brakesNavItem()
-    {
-        return cy.get('section.gen_select_container ul.nav_first_tier a[title="2016-2021 Camaro Brakes"]')
-        .contains('Brakes');
-    }
-
-
 
 
     
@@ -29,15 +20,5 @@ export class HomePageItems
     
     
     
-    // Free Camaro Catalog Request Modal
-    freeCamaroCatalogRequestModal()
-    {
-        return cy.get('div.marketing_modal > div.marketing_modal');
-    }
-
-    freeCamaroCatalogRequestModalCloseLink()
-    {
-        return cy.get('div.marketing_modal > form[data-form-type="RequestCatalog"] a.close_trigger')
-        .contains('No thanks');
-    }
+    
 }

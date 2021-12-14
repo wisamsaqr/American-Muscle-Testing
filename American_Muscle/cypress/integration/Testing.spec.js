@@ -1,11 +1,13 @@
 /// <reference types="cypress" />
 
 import { HomePage } from "./pageObjecs/homePage/page";
+import { CamaroAccessoriesPartsPage } from "./pageObjecs/camaroAccessoriesParts/page";
 
 
 describe("American Muscle Testing",()=>
 {
     let homePage = new HomePage()
+    let camaroAccessoriesPartsPage = new CamaroAccessoriesPartsPage()
     
     before('Configurations', ()=>
     {
@@ -16,7 +18,7 @@ describe("American Muscle Testing",()=>
     it('Verifying visiting "American Muscle" homepage', ()=>
     {
         // Visiting "American Muscle" homepage
-        homePage.actions.navigate()
+        homePage.actions.visit()
         homePage.tests.pageVisited()
     })
 
@@ -28,21 +30,17 @@ describe("American Muscle Testing",()=>
 
         // Choosing '(2016-2022)'
         homePage.actions.clickCamaro2016_2022ShopNavItem()
-        homePage.tests.camaroShop2016_2022NavItemClicked()
+        camaroAccessoriesPartsPage.tests.pageVisited()
 
         // Closing Camaro Catalog Request Modal
-        homePage.actions.closeFreeCamaroCatalogRequestModal()
+        camaroAccessoriesPartsPage.actions.closeFreeCamaroCatalogRequestModal()
+        camaroAccessoriesPartsPage.tests.freeCamaroCatalogRequestModalHidden()
     })
 
-    // it("Verifying navigating to All Categories page", ()=>
-    // {
-    //     // Navigating to All Categories page
-    //     allCategoriesPage.tests.pageUrl()
-    //     allCategoriesPage.tests.allCategoriesNavItemSelected()
-    //     allCategoriesPage.tests.mainTitleHasAllCategoriesText()
-
-    //     allCategoriesPage.actions.clickMonitorsCategory()
-    // })
+    it("Verifying navigating to 2016-2022 Camaro Rotors", ()=>
+    {
+        
+    })
 
     // context('Navigating to monitors page'
     //     +' then selecting asus filter'

@@ -7,7 +7,7 @@ export class HomePageActions
         this.items = new HomePageItems();
     }
 
-    navigate()
+    visit()
     {
         cy.visit("/");
     }
@@ -30,21 +30,5 @@ export class HomePageActions
     clickBrakesNavItem()
     {
         this.items.brakesNavItem.click();
-    }
-    
-    
-    
-    
-
-
-    // Free Camaro Catalog Request Modal
-    closeFreeCamaroCatalogRequestModal()
-    {
-        // this.items.freeCamaroCatalogRequestModalCloseLink().click();
-
-        if (this.items.freeCamaroCatalogRequestModal().length > 0)
-        {
-            this.items.freeCamaroCatalogRequestModalCloseLink().click();
-        }
     }
 }
