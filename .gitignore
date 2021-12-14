@@ -1,0 +1,30 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/American_Muscle/node_modules
+/American_Muscle/.pnp
+/American_Muscle/.pnp.js
+
+# testing
+/American_Muscle/coverage
+
+# production
+/American_Muscle/build
+
+# misc
+/American_Muscle/.DS_Store
+/American_Muscle/.idea
+
+/American_Muscle/npm-debug.log*
+/American_Muscle/yarn-debug.log*
+/American_Muscle/yarn-error.log*
+
+/American_Muscle/cypress/videos
+/American_Muscle/cypress/screenshots
+/American_Muscle/.nyc_output
+
+/American_Muscle/.env*.local
+
+/American_Muscle/build/
+/American_Muscle/dist/
+/American_Muscle/node_modules/
