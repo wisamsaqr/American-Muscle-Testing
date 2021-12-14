@@ -2,17 +2,19 @@ export class CamaroAccessoriesPartsPageItems
 {
     constructor(){}
 
-    brakesNavItem()
-    {
-        return cy.get('section.gen_select_container ul.nav_first_tier a[title="2016-2021 Camaro Brakes"]')
-        .contains('Brakes');
-    }
+    // brakesNavItem()
+    // {
+    //     return cy.get('section.gen_select_container ul.nav_first_tier a[title="2016-2021 Camaro Brakes"]')
+    //     .contains('Brakes');
+    // }
 
     rotorsNavItem()
     {
         return cy.get('div.nav_second_tier div.categories a[title="2016-2021 Camaro Rotors"]')
         .contains('Rotors');
     }
+
+
 
 
     // Free Camaro Catalog Request Modal

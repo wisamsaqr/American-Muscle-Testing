@@ -2,12 +2,13 @@
 
 import { HomePage } from "./pageObjecs/homePage/page";
 import { CamaroAccessoriesPartsPage } from "./pageObjecs/camaroAccessoriesParts/page";
-
+import { CamaroRotorsPage } from "./pageObjecs/camaroRotors/page";
 
 describe("American Muscle Testing",()=>
 {
     let homePage = new HomePage()
     let camaroAccessoriesPartsPage = new CamaroAccessoriesPartsPage()
+    let camaroRotorsPage = new CamaroRotorsPage()
     
     before('Configurations', ()=>
     {
@@ -39,7 +40,8 @@ describe("American Muscle Testing",()=>
 
     it("Verifying navigating to 2016-2022 Camaro Rotors", ()=>
     {
-        
+        camaroAccessoriesPartsPage.actions.clickRotorsNavItem()
+        camaroRotorsPage.tests.pageVisited()
     })
 
     // context('Navigating to monitors page'

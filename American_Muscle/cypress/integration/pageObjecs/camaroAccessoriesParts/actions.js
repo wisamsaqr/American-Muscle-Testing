@@ -9,8 +9,10 @@ export class CamaroAccessoriesPartsPageActions
 
     clickRotorsNavItem()
     {
-        this.items.rotorsNavItem().click();
+        this.items.rotorsNavItem().click({force: true});
     }
+
+
 
 
 
