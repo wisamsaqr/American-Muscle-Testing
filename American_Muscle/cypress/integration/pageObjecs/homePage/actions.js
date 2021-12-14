@@ -12,15 +12,24 @@ export class HomePageActions
         cy.visit("/");
     }
 
-    clickAllCategoriesNavItem()
+    clickCamaroShopNavItem()
     {
         this.items.camaroShopNavItem().click();
     }
 
+    clickCamaro2016_2022ShopNavItem()
+    {
+        this.items.camaroShop2016_2022NavItem().click();
+    }
 
-
-    // clickAllCategoriesNavItem()
-    // {
-    //     this.items.allCategoriesNavItem().click();
-    // }
+    
+    
+    
+    
+    
+    
+    CloseFreeCamaroCatalogRequestModal()
+    {
+        this.items.freeCamaroCatalogRequestModalCloseLink().click();
+    }
 }

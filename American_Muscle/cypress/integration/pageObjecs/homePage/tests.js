@@ -7,24 +7,27 @@ export class HomePageTests
         this.items = new HomePageItems();
     }
 
-    // Page load
-    // Page url
-    pageUrl()
+    // Page Visited
+    pageVisited()
     {
         cy.url().should('eq', 'https://www.americanmuscle.com/');
     }
     
-    // Home nav item
-    // homeNavItemSelected()
-    // {
-    //     this.items.homeNavItem().should('have.class', 'current-menu-item')
-    // }
-    // Page load end
 
+    // Camaro Shop nav item
+    camaroShopNavItemClicked()
+    {
+        cy.url().should('include', '/#camaro')
+    }
+
+    camaroShop2016_2022NavItemClicked()
+    {
+        cy.url().should('include', '/2016-camaro-accessories-parts.html')
+    }
 
     // All categories nav item click
     // allCategoriesNavItemClicked()
     // {
-    //     cy.url().should('include', '/all-categories').should()
+    //     this.items.homeNavItem().should('have.class', 'current-menu-item')
     // }
 }

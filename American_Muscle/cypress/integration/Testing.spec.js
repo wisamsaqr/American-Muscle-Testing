@@ -19,16 +19,23 @@ describe("American Muscle Testing",()=>
     {
         // Visiting "American Muscle" homepage
         homePage.actions.navigate()
-        homePage.tests.pageUrl()
+        homePage.tests.pageVisited()
     })
 
-    // it("Verifying Choosing 'Camaro Vehicle (2016-2022)' from the home page's Main Banner", ()=>
-    // {
-    //     // Choosing 'Camaro Vehicle (2016-2022)'
-    //     camaroShopNavItem
-    //     homePage.actions.clickAllCategoriesNavItem()
-    //     homePage.tests.pageUrl()
-    // })
+    it("Verifying Choosing 'Camaro Vehicle (2016-2022)' from the home page's Main Banner", ()=>
+    {
+        // Choosing 'Camaro Vehicle'
+        homePage.actions.clickCamaroShopNavItem()
+        homePage.tests.camaroShopNavItemClicked()
+
+        // Choosing '(2016-2022)'
+        homePage.actions.clickCamaro2016_2022ShopNavItem()
+        homePage.tests.camaroShop2016_2022NavItemClicked()
+
+        // Closing Camaro Catalog Request Modal
+        // if (cy.find("").length > 0)
+        // homePage.actions.CloseFreeCamaroCatalogRequestModal()
+    })
 
     // it("Verifying navigating to All Categories page", ()=>
     // {

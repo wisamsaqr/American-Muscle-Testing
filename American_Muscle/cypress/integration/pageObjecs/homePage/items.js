@@ -7,8 +7,20 @@ export class HomePageItems
         return cy.get('div#page div.vehicle_select_container nav > a[data-vehicle-type="Camaro"]');
     }
 
-    // allCategoriesNavItem()
+    camaroShop2016_2022NavItem()
+    {
+        return cy.get('div#page div.sub_panel_visible nav > a[title="2016-2022 Camaro Accessories & Parts"]');
+    }
+
+    
+    
+    
+    
+    
+    
+    // freeCamaroCatalogRequestModalCloseLink()
     // {
-    //     return cy.get('nav#nav ul[id^=menu]>li[id^=menu-item] > a').contains('جميع الفئات');
+    //     return cy.get('div.marketing_modal > form[data-form-type="RequestCatalog"] a.close_trigger')
+    //     .contains('No thanks');
     // }
 }
