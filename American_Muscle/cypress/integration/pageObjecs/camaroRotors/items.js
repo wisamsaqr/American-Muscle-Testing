@@ -2,9 +2,28 @@ export class CamaroRotorsPageItems
 {
     constructor(){}
 
-    // brakesNavItem()
-    // {
-    //     return cy.get('section.gen_select_container ul.nav_first_tier a[title="2016-2021 Camaro Brakes"]')
-    //     .contains('Brakes');
-    // }
+    brakeRotorsAndDrumsFilter()
+    {
+        return cy.get('a[data-facet-id="Brake Rotors and Drums"]');
+    }
+
+    brakeRotorsAndDrumsFilterCount()
+    {
+        return cy.get('a[data-facet-id="Brake Rotors and Drums"] span.count');
+    }
+
+    brakeRotorsAndDrumsProductsContainerCount()
+    {
+        return cy.get('div.products_container p.total > span.total_matching');
+    }
+
+    brakeRotorsAndDrumsPaginationCount()
+    {
+        return cy.get('nav.pagination p.total');
+    }
+
+    brakeRotorsAndDrumsFacet()
+    {
+        return cy.get('p[data-facet-id="Brake Rotors and Drums"]');
+    }
 }

@@ -14,7 +14,7 @@ export class HomePageActions
 
     clickCamaroShopNavItem()
     {
-        this.items.camaroShopNavItem().click();
+        this.items.camaroShopNavItem().click({force: true});
     }
 
     clickCamaro2016_2022ShopNavItem()

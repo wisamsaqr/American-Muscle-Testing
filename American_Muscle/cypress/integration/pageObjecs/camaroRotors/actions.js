@@ -7,8 +7,8 @@ export class CamaroRotorsPageActions
         this.items = new CamaroRotorsPageItems();
     }
 
-    // clickRotorsNavItem()
-    // {
-    //     this.items.rotorsNavItem().click({force: true});
-    // }
+    clickBrakeRotorsAndDrumsFilter()
+    {
+        this.items.brakeRotorsAndDrumsFilter().click();
+    }
 }

@@ -20,11 +20,6 @@ export class CamaroAccessoriesPartsPageActions
     // Free Camaro Catalog Request Modal
     closeFreeCamaroCatalogRequestModal()
     {
-        // this.items.freeCamaroCatalogRequestModalCloseLink().click();
-
-        if (this.items.freeCamaroCatalogRequestModal().length > 0)
-        {
-            this.items.freeCamaroCatalogRequestModalCloseLink().click();
-        }
+        this.items.freeCamaroCatalogRequestModalCloseLink().click();
     }
 }
