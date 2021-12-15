@@ -10,6 +10,6 @@ export class CatalogRequestModalActions
     // Free Camaro Catalog Request Modal
     closeFreeCamaroCatalogRequestModal()
     {
-        this.items.freeCamaroCatalogRequestModalCloseLink().click();
+        this.items.freeCamaroCatalogRequestModalCloseLink().click({force: true});
     }
 }

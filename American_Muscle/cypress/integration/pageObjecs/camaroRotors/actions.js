@@ -34,4 +34,12 @@ export class CamaroRotorsPageActions
     {
         this.items.sortSelect().select('Customer Rating');
     }
+
+    // Opening product with highest customre rating
+    openProductWithHighestCustomreRating()
+    {
+        this.items.firstRotorItem().invoke('text').as('productWithHighestCustomreRatingName')
+
+        this.items.firstRotorItem().click();
+    }
 }

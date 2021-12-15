@@ -65,6 +65,12 @@ export class CamaroRotorsPageItems
         return cy.get('div[data-qatgt="rating"] + p > span');
     }
 
+    // Opening product with highest customre rating
+    firstRotorItem()
+    {
+        return cy.get('a[data-qatgt="productName"]').first();
+    }
+
     
     
     
