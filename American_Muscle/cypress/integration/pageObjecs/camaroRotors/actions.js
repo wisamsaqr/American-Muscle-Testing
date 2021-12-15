@@ -16,12 +16,12 @@ export class CamaroRotorsPageActions
     // Filtering rotors By "Price"
     fillMin_priceInput(minPrice)
     {
-        this.items.min_priceInput().type(minPrice);
+        this.items.minPriceInput().type(minPrice);
     }
 
     fillMax_priceInput(maxPrice)
     {
-        this.items.max_priceInput().type(maxPrice);
+        this.items.maxPriceInput().type(maxPrice);
     }
 
     clickLimitPriceGoButton()
@@ -36,7 +36,7 @@ export class CamaroRotorsPageActions
     }
 
     // Opening product with highest customre rating
-    openProductWithHighestCustomreRating()
+    clickProductWithHighestCustomreRating()
     {
         this.items.firstRotorItem().invoke('text').as('productWithHighestCustomreRatingName')
 

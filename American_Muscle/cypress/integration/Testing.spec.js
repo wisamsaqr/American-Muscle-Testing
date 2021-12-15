@@ -11,7 +11,7 @@ import { ProductDetailsPage } from "./pageObjecs/productDetails/page";
 
 describe("American Muscle Testing",()=>
 {
-    let waitingTime = 30000
+    let waitingTime = 10000
 
     let homePage = new HomePage()
     let camaroAccessoriesPartsPage = new CamaroAccessoriesPartsPage()
@@ -27,17 +27,6 @@ describe("American Muscle Testing",()=>
         // Cypress.Cookies.defaults({preserve: (cookie) => { return true; }})
     })
 
-    // beforeEach('Closing Modal', ()=>
-    // {
-    //     // Closing Camaro Catalog Request Modal
-    //     // if (catalogRequestModal.items.freeCamaroCatalogRequestModal().length > 0)
-    //     // if (cy.get('div.marketing_modal > div.marketing_modal').length > 0)
-    //     // {
-    //     //     catalogRequestModal.actions.closeFreeCamaroCatalogRequestModal()
-    //     //     catalogRequestModal.tests.freeCamaroCatalogRequestModalHidden()
-    //     // }
-    // })
-
     // it('Verifying visiting "American Muscle" homepage', ()=>
     // {
     //     // Visiting "American Muscle" homepage
@@ -47,12 +36,12 @@ describe("American Muscle Testing",()=>
 
     // it("Verifying Choosing 'Camaro Vehicle (2016-2022)' from the home page's Main Banner", ()=>
     // {
-    //     cy.wait(waitingTime)    // ****
+    //     cy.wait(waitingTime)
     //     // Choosing 'Camaro Vehicle'
     //     homePage.actions.clickCamaroShopNavItem()
     //     homePage.tests.camaroShopNavItemClicked()
 
-    //     cy.wait(waitingTime)    // ****
+    //     cy.wait(waitingTime)
     //     // Choosing '(2016-2022)'
     //     homePage.actions.clickCamaro2016_2022ShopNavItem()
     //     camaroAccessoriesPartsPage.tests.pageVisited()
@@ -99,8 +88,8 @@ describe("American Muscle Testing",()=>
     //         // Applying Price filter
     //         cy.fixture('./data.json').then(data=>
     //         {
-    //             camaroRotorsPage.actions.fillMin_priceInput(data.minPrice)
-    //             camaroRotorsPage.actions.fillMax_priceInput(data.maxPrice)
+    //             camaroRotorsPage.actions.fillMinPriceInput(data.minPrice)
+    //             camaroRotorsPage.actions.fillMaxPriceInput(data.maxPrice)
     //             camaroRotorsPage.actions.clickLimitPriceGoButton()
     //             cy.wait(waitingTime)
 
@@ -121,8 +110,24 @@ describe("American Muscle Testing",()=>
     it('Opening product with highest customre rating',  ()=>
     {
         // Opening product with highest customre rating
-        // camaroRotorsPage.actions.openProductWithHighestCustomreRating()
+        // camaroRotorsPage.actions.clickProductWithHighestCustomreRating()
+        
+        // productDetailsPage.tests.pageVisited()
+    })
+
+    it('Adding the product to the saved products list',  ()=>
+    {
         cy.visit('https://www.americanmuscle.com/sp-performance-camaro-diamond-slot-rotors-gray-zrc-front-d55-2154.html')  // XXXXXXXXXXXXXXXXXX
-        productDetailsPage.tests.pageVisited()
+        cy.wait(waitingTime)   
+        // Adding the product to the saved products list
+        productDetailsPage.actions.clickSaveForLaterButton()
+        productDetailsPage.tests.saveForLaterLoginModalDisplayed()
+
+        cy.fixture('./data.json').then(data=>
+        {
+            productDetailsPage.actions.submitSaveForLaterLoginModal(data.email)
+        })
+        productDetailsPage.tests.saveForLaterLoginModalHidden()
+        productDetailsPage.tests.saveForLaterSavedMessageDisplayed()
     })
 })

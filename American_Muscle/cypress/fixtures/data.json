@@ -1,4 +1,6 @@
 {
   "minPrice": 120,
-  "maxPrice": 290
+  "maxPrice": 290,
+
+  "email": "wisam.saqr@test.com"
 }
