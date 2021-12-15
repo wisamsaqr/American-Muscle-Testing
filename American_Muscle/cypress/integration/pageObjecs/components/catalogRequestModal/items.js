@@ -5,7 +5,7 @@ export class CatalogRequestModalItems
     // Free Camaro Catalog Request Modal
     freeCamaroCatalogRequestModal()
     {
-        return cy.get('div.marketing_modal > div.marketing_modal');
+        return cy.get('div.marketing_modal > div.marketing_modal', {timeout: 60000});
     }
 
     freeCamaroCatalogRequestModalCloseLink()
@@ -13,7 +13,7 @@ export class CatalogRequestModalItems
         return cy.get('div.marketing_modal > form[data-form-type="RequestCatalog"] a.close_trigger')
         .contains('No thanks').then((e)=>
         {
-cy.log(e.length)
+            cy.log(e.length)
         });
     }
 }
