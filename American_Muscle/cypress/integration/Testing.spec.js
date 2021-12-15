@@ -24,7 +24,7 @@ describe("American Muscle Testing",()=>
     before('Configurations', ()=>
     {
         // Preserve cookie
-        // Cypress.Cookies.defaults({preserve: (cookie) => { return true; }})
+        Cypress.Cookies.defaults({preserve: (cookie) => { return true; }})
     })
 
     // it('Verifying visiting "American Muscle" homepage', ()=>
@@ -129,5 +129,15 @@ describe("American Muscle Testing",()=>
         })
         productDetailsPage.tests.saveForLaterLoginModalHidden()
         productDetailsPage.tests.saveForLaterSavedMessageDisplayed()
+    })
+
+
+
+    it('Navigating to "Saved Products" page',  ()=>
+    {
+        cy.wait(waitingTime)   
+        // Navigating to "Saved Products" page
+        productDetailsPage.actions.clickSavedProductsMenuItem()
+        
     })
 })

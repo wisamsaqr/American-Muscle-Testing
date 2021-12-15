@@ -19,7 +19,7 @@ export class ProductDetailsPageActions
         this.items.saveForLaterLoginModalSubmitButton().click({force: true})
     }
 
-    // Navigating to my build list (saved products page)
+    // Navigating to "Saved Products" page
     clickSavedProductsMenuItem()
     {
         this.items.savedProductsMenuItem().click({force: true})

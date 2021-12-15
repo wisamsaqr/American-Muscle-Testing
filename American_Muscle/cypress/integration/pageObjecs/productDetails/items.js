@@ -35,7 +35,7 @@ export class ProductDetailsPageItems
         return cy.get('section.save_for_later_container p.saved');
     }
 
-    // Navigating to my build list (saved products page)
+    // Navigating to "Saved Products" page
     savedProductsMenuItem()
     {
         return cy.get('ul.menu_list a[title="View your Build Lists"]');
