@@ -1,7 +1,7 @@
 import {ShoppingCartPageActions} from "./actions"
 import {ShoppingCartPageTests} from "./tests"
 
-export class SavedProductsPage
+export class ShoppingCartPage
 {
     constructor()
     {

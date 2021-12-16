@@ -121,7 +121,7 @@ describe("American Muscle Testing",()=>
     it('Adding the product to the saved products list',  ()=>
     {
         cy.visit('https://www.americanmuscle.com/sp-performance-camaro-diamond-slot-rotors-gray-zrc-front-d55-2154.html')  // XXXXXXXXXXXXXXXXXX
-        cy.wait(waitingTime)   
+        cy.wait(waitingTime)
         // Adding the product to the saved products list
         productDetailsPage.actions.clickSaveForLaterButton()
         productDetailsPage.tests.saveForLaterLoginModalDisplayed()
@@ -136,12 +136,10 @@ describe("American Muscle Testing",()=>
 
     it('Navigating to "Saved Products" page',  ()=>
     {
-        cy.wait(waitingTime)   
+        cy.wait(waitingTime)
         // Navigating to "Saved Products" page
         productDetailsPage.actions.clickSavedProductsMenuItem()
         savedProductsPage.tests.pageVisited()
-
-        savedProductsPage.actions.clickAddToCartButton()
     })
 
     it('Adding the selected product to cart',  ()=>
@@ -149,7 +147,8 @@ describe("American Muscle Testing",()=>
         cy.wait(waitingTime)
         // Adding the selected product to cart
         savedProductsPage.actions.clickAddToCartButton()
+        cy.wait(waitingTime)
 
-        .tests.pageVisited()
+        shoppingCartPage.tests.pageVisited()
     })
 })
