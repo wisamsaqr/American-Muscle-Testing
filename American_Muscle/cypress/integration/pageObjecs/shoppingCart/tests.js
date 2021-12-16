@@ -28,9 +28,10 @@ export class ShoppingCartPageTests
         
     }
 
-    // Add the selected product to cart
-    // selectedProductAddedToCart()
-    // {
-    //     // this.items.saveForLaterLoginModal().should('be.visible')
-    // }
+    // Set quantity to 11
+    elevenOptionInQuantityDropdownListSelected()
+    {
+        this.items.quantityDropdownListOneOption().should('not.have.class', 'dd-selected')
+        this.items.quantityDropdownListElevenOption().should('have.class', 'dd-selected')
+    }
 }

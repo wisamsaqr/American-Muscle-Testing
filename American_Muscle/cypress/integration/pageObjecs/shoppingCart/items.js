@@ -24,4 +24,15 @@ export class ShoppingCartPageItems
     {
         return cy.get('section.cart li.product_item:nth-child(2) > div.details_container > div.unit_price');
     }
+
+    // Set quantity to 11
+    quantityDropdownListOneOption()
+    {
+        return cy.get('section.cart li.product_item:nth-child(2) > div.details_container ul.dropdown-menu > li[data-value="1"]');
+    }
+    
+    quantityDropdownListElevenOption()
+    {
+        return cy.get('section.cart li.product_item:nth-child(2) > div.details_container ul.dropdown-menu > li[data-value="11"]');
+    }
 }

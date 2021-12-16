@@ -7,9 +7,17 @@ export class ShoppingCartPageActions
         this.items = new ShoppingCartPageItems();
     }
 
-    // Add the selected product to cart
-    // clickAddToCartButton()
-    // {
-    //     this.items.addToCartButton().click({force: true});
-    // }
+    // Set quantity to 11
+    selectElevenOptionInQuantityDropdownList()
+    {
+        this.items.quantityDropdownListOneOption().then(elem=>
+        {
+            elem.removeClass('dd-selected')
+        })
+
+        this.items.quantityDropdownListElevenOption().then(elem=>
+        {
+            elem.addClass('dd-selected')
+        })
+    }
 }
