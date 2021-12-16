@@ -7,9 +7,9 @@ export class SavedProductsPageActions
         this.items = new SavedProductsPageItems();
     }
 
-    // // Adding the product to the saved products list
-    // clickSaveForLaterButton()
-    // {
-    //     this.items.saveForLaterButton().click({force: true});
-    // }
+    // Add the selected product to cart
+    clickAddToCartButton()
+    {
+        this.items.addToCartButton().click({force: true});
+    }
 }

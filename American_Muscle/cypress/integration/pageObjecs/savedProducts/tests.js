@@ -4,18 +4,20 @@ export class SavedProductsPageTests
 {
     constructor()
     {
-        this.items = new SavedProductsItems();
+        this.items = new SavedProductsPageItems();
     }
 
     // Page Visited
     pageVisited()
     {
+        cy.url().should('include', '/saved-for-later.html');
         
-    }
+        this.items.savedForLaterNavItem().should('exist')   // mmm
 
-    // // Adding the product to the saved products list
-    // saveForLaterLoginModalDisplayed()
-    // {
-    //     this.items.saveForLaterLoginModal().should('be.visible')
-    // }
+        // this.items.savedForLaterNavItem().find('a').should('exist')
+
+        // this.items.savedForLaterNavItem().should('contain.html', 'span')
+
+        this.items.listsTitle().should('have.text', ' Saved Products ')
+    }
 }

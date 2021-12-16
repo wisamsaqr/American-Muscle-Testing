@@ -1,5 +1,7 @@
 {
     "baseUrl": "https://www.americanmuscle.com",
+    "viewportWidth": 1200,
+    "viewportHeight": 660,
 
 
     "hideXHR": true

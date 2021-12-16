@@ -7,7 +7,8 @@ import { CamaroRotorsPage } from "./pageObjecs/camaroRotors/page";
 import { CatalogRequestModal } from "./pageObjecs/components/catalogRequestModal/modal";
 
 import { ProductDetailsPage } from "./pageObjecs/productDetails/page";
-
+import { SavedProductsPage } from "./pageObjecs/savedProducts/page";
+import { ShoppingCartPage } from "./pageObjecs/shoppingCart/page";
 
 describe("American Muscle Testing",()=>
 {
@@ -20,8 +21,10 @@ describe("American Muscle Testing",()=>
     let catalogRequestModal = new CatalogRequestModal()
 
     let productDetailsPage = new ProductDetailsPage()
+    let savedProductsPage = new SavedProductsPage()
+    let shoppingCartPage = new ShoppingCartPage()
     
-    before('Configurations', ()=>
+    beforeEach('Configurations', ()=>
     {
         // Preserve cookie
         Cypress.Cookies.defaults({preserve: (cookie) => { return true; }})
@@ -131,13 +134,22 @@ describe("American Muscle Testing",()=>
         productDetailsPage.tests.saveForLaterSavedMessageDisplayed()
     })
 
-
-
     it('Navigating to "Saved Products" page',  ()=>
     {
         cy.wait(waitingTime)   
         // Navigating to "Saved Products" page
         productDetailsPage.actions.clickSavedProductsMenuItem()
-        
+        savedProductsPage.tests.pageVisited()
+
+        savedProductsPage.actions.clickAddToCartButton()
+    })
+
+    it('Adding the selected product to cart',  ()=>
+    {
+        cy.wait(waitingTime)
+        // Adding the selected product to cart
+        savedProductsPage.actions.clickAddToCartButton()
+
+        .tests.pageVisited()
     })
 })
